@@ -99,7 +99,62 @@
         echo "NOT : $third";
         echo "<hr>";
 
-        
+        // Ternary 
+        echo "<h3>Ternary: Soal 1</h3>";
+
+        $age = 17;
+        $ktp = $age >= 17;
+        $jawab = $ktp ? "Buat KTP" : "Belum Bisa Buat KTP";
+
+        echo $jawab;
+        echo "<hr>";
+
+        // 2
+        echo "<h3>Ternary: Soal 2</h3>";
+        $umur = 45;
+
+        if ( $umur >= 25) {
+            echo "<p>Dewasa</p>";
+        } else if ( $umur >= 12) {
+            echo "<p>Remaja</p>";
+        } else if ( $umur >= 5){
+            echo "<p>Anak-Anak</p>";
+        } else {
+            echo "<p>Balita</p>";
+        }
+        echo "<hr>";
+        //Using Ternary
+        $result = ($umur >= 25) ? "Dewasa" : (($umur >= 12) ? "Remaja" : (($umur >= 5) ? "Anak2" : "Balita"));
+        echo "Jika kita berumur $umur maka kita termasuk $result";
+        echo "<hr>";
+
+        // No 3
+        echo "<h3>Ternary: Soal 3</h3>";
+        $grade = 85;
+
+        $res = ($grade > 90) ? "grade A": (($grade > 80) ? "grade B" : (($grade > 70) ? "grade C" : "grade D"));
+        echo "Nilai Kamu : $grade, dan kamu mendapatkan $res";
+        echo "<hr>";
+
+        // No 4
+        echo "<h3>Ternary: Soal 4</h3>";
+        $DPK = 70;
+        $MTK = 87;
+        $Agama = 80;
+
+        $rata = floor($DPK + $MTK + $Agama ) / 3;
+
+        $mean = ($rata > 90 ) ?  "Sangat Bagus": (($rata > 85) ? "Bagus" :  (($rata > 80) ? "Sangat Baik" : (($rata > 70) ? "Baik" : "Kurang")));
+        echo "Nilai Rata Rata kamu adalah : $rata, artinya $mean";
+        echo "<hr>";
+
+        // No 5
+        echo "<h3>Ternary: Soal 5</h3>";
+        $x = 20;
+        $y = 30;
+
+        $dif = ($x === $y) ? "Nilai Sama" : (($x > $y) ? "x lebih besar dari y " : (($x < $y) ? "y lebih besar dari x" : "Tidak Ada"));
+        echo "nilai x adalah $x dan nilai y adalah $y maka $dif";
     ?>
 </body>
 </html>
